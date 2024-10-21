@@ -27,7 +27,7 @@ public class GlobalExceptionHandler {
 
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<Object>handleRuntimeException(RuntimeException ex){
+    public ResponseEntity<Object>DuplicateCustomerIdException(RuntimeException ex){
         Map<String, String> errorResponse = new HashMap();
         errorResponse.put("Error", ex.getMessage());
         return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);

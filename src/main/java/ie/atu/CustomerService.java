@@ -26,13 +26,13 @@ public class CustomerService {
         return customerRepository.save(customer);
     }
 
-    public Customer findById(String customerId){
+    public Customer getId(String customerId){
         return customerRepository.findById(customerId)
                 .orElseThrow(() -> new RuntimeException("ID " + customerId + " Not Found"));
     }
 
     public void deleteCustomer(String customerId){
-        findById(customerId);
+        getId(customerId);
         customerRepository.deleteById(customerId);
     }
 }
