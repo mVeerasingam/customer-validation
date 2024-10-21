@@ -18,10 +18,6 @@ public class CustomerService {
         return customerRepository.findAll();
     }
 
-    public Optional<Customer> getCustomerById(String customerId){
-        return customerRepository.findById(customerId);
-    }
-
     public  Customer createCustomer(Customer customer){
         return customerRepository.save(customer);
     }
